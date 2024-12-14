@@ -43,6 +43,22 @@
         </visual>
     </link>
 
+    <link name="world_link">
+        <visual>
+            <geometry>
+                <mesh filename="file:///home/drak/ros2_ws/src/cadtoURDF/meshes/world.STL"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <link name="base_footprint"/>
+
+    <joint name="base_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="base_footprint"/>
+        <origin xyz="0 0 -0.350" rpy="0 0 0"/>
+    </joint>
+
     <joint name="base_left_wheel_joint" type="continuous">
         <parent link="base_link"/>
         <child link="left_wheel"/>
@@ -55,6 +71,12 @@
         <child link="right_wheel"/>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <axis xyz="0 1 0"/>
+    </joint>
+
+    <joint name="base_footprint_world_joint" type="fixed">
+        <parent link="base_footprint"/>
+        <child link="world_link"/>
+        <origin xyz="0 0 -1.7" rpy="0 0 0"/>
     </joint>
 
 </robot>

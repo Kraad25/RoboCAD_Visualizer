@@ -8,3 +8,5 @@ Overview:
 
 To launch RViz with your URDF model, use the following command:
 ros2 launch urdf_tutorial display.launch.py model:=/absolute/path/to/your/urdf/file.urdf 
+
+In RViz, go to Displays, Global Options, and Change the fixed frame from base_link to world_link
