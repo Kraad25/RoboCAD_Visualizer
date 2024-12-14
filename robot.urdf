@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<robot name="SBR">
+
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <mesh filename="file:///home/drak/ros2_ws/src/cadtoURDF/meshes/base_link.STL"/>
+            </geometry>
+
+            <origin xyz="0 0 0.4" rpy="0 0 0"/>
+        </visual>
+    </link>
+
+
+</robot>
